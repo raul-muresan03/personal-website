@@ -6,8 +6,8 @@ import { DiProlog } from "react-icons/di";
 import { GiProcessor } from "react-icons/gi";
 
 const skills = [
-    { name: "C", experience: "4", level: "Advanced", Icon: SiC },
     { name: "C++", experience: "5", level: "Advanced", Icon: SiCplusplus },
+    { name: "C", experience: "4", level: "Advanced", Icon: SiC },
     { name: "Java", experience: "3", level: "Intermediate", Icon: FaJava },
     { name: "Python", experience: "2", level: "Beginner", Icon: FaPython },
     { name: "React", experience: "2", level: "Intermediate", Icon: FaReact },
