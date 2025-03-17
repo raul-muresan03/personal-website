@@ -9,7 +9,8 @@ export function Projects() {
             desc: 'NoteFlow is a note-taking application, based on React, Convex and Tailwind CSS, useful for smart organization and increased productivity.',
             image: "noteflow.png",
             tags: ['React', 'Node.js', 'Typescript', 'Convex', 'Tailwind CSS'],
-            link: 'https://github.com/raul-muresan03/NoteFlow'
+            link: 'https://github.com/raul-muresan03/NoteFlow',
+            link2: "https://note-flow-beryl.vercel.app/"
         },
         {
             title: 'Security system with motion sensor and email notification (Arduino, C++)',
@@ -85,6 +86,7 @@ export function Projects() {
                                 image={project.image}
                                 tags={project.tags}
                                 link={project.link}
+                                link2={project.link2}
                             />
                         </div>
                     ))}
