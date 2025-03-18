@@ -13,6 +13,13 @@ export function Projects() {
             link2: "https://note-flow-beryl.vercel.app/"
         },
         {
+            title: 'Questify (React, Next.js, Typescript, Tailwind CSS, Java, Spring Boot, PostgreSQL)',
+            desc: 'Questify is a Q&A platform that allows users to post questions and receive answers, with an upvote/downvote system to rank responses. Built using modern web technologies, it ensures a seamless experience for users looking for knowledge exchange.',
+            image: "questify1.png",
+            tags: ['React', 'Next.js', 'Typescript', 'Java', 'Tailwind CSS', 'Spring Boot', 'PostgreSQL'],
+            link: 'https://github.com/omuletzu/Questify',
+        },
+        {
             title: 'Security system with motion sensor and email notification (Arduino, C++)',
             desc: 'The project develops a security system using a PIR sensor for motion detection and a DHT11 sensor for temperature and humidity monitoring. When a presence is detected, the system automatically sends an email notification with the current temperature and humidity.',
             image: 'arduino.jpg',
