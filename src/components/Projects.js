@@ -40,7 +40,6 @@ export function Projects() {
             tags: ['VHDL'],
             link: 'https://github.com/raul-muresan03/Code-Locker'
         },
-
         {
             title: 'PACMAN (Assembly x86)',
             desc: 'Developed during my first year of university, using x86 Assembly. This project taught me a great deal of new concepts and significantly shaped my logical thinking. It sparked my interest in working with Assembly language.',
@@ -50,7 +49,7 @@ export function Projects() {
         },
         {
             title: 'MIPS Processor 32bit (VHDL)',
-            desc: 'Both pipeline and single cycle versions on 32-bit.',
+            desc: 'I developed a 32-bit MIPS processor in VHDL, implementing both single-cycle and pipeline versions. I designed control units, an ALU, and handled hazards in the pipeline. The project deepened my knowledge of processor architecture, hardware design, and VHDL.',
             image: 'mips.png',
             tags: ['VHDL'],
             link: 'https://github.com/raul-muresan03/MIPS-pipeline'
