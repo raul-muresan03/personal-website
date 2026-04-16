@@ -1,5 +1,4 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { Button } from "./Button";
 import { ThemeToggle } from "./ThemeToggle";
 
 export function Navbar() {

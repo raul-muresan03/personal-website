@@ -1,4 +1,3 @@
-import './App.css';
 import { Experience } from './components/sections/Experience';
 import { Contact } from './components/sections/Contact';
 import { HeroSection } from './components/sections/HeroSection';
