@@ -7,7 +7,7 @@ export function Projects() {
         {
             title: 'ToolGrile (Licence Thesis)',
             desc: 'Advanced Computer Vision pipeline for digitizing mathematical quizzes. Achieved 100% indexing accuracy on 950+ grids using OpenCV and Tesseract OCR, featuring parallel processing for a 7x speedup.',
-            image: "exam_digitization.png",
+            image: "licenta_ToolGrile.png",
             tags: ['Python', 'OpenCV', 'Tesseract OCR', 'Computer Vision', 'Parallel Processing'],
             link: 'https://github.com/raul-muresan03/ToolGrile',
         },
