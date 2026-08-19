@@ -19,6 +19,7 @@ export function ThemeToggle() {
     return (
         <button
             onClick={() => setDark(!dark)}
+            aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
             className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-yellow-500 dark:text-yellow-300 hover:scale-110 transition-transform"
         >
             {dark ? <FaSun size={18} /> : <FaMoon size={18} />}

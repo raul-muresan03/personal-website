@@ -1,6 +1,5 @@
-import { ComponentType } from "react";
-import { FaPython, FaDatabase, FaJava } from "react-icons/fa";
-import { SiCplusplus, SiNextdotjs, SiTypescript, SiOpencv } from "react-icons/si";
+import type { ComponentType } from "react";
+import { SKILLS } from "../../constants";
 
 interface SkillCardProps {
     name: string;
@@ -8,16 +7,6 @@ interface SkillCardProps {
     level: string;
     Icon: ComponentType<{ className?: string }>;
 }
-
-const skills: SkillCardProps[] = [
-    { name: "C / C++", experience: "5", level: "Intermediate", Icon: SiCplusplus },
-    { name: "Python", experience: "3", level: "Intermediate", Icon: FaPython },
-    { name: "React / Next.js", experience: "3", level: "Intermediate", Icon: SiNextdotjs },
-    { name: "TypeScript", experience: "2", level: "Intermediate", Icon: SiTypescript },
-    { name: "Java", experience: "3", level: "Intermediate", Icon: FaJava },
-    { name: "SQL / PostgreSQL", experience: "3", level: "Intermediate", Icon: FaDatabase },
-    { name: "OpenCV", experience: "1", level: "Intermediate", Icon: SiOpencv },
-];
 
 export function SkillCard({ name, experience, level, Icon }: SkillCardProps) {
     const experienceText = experience === "1" ? "1 year" : `${experience} years`;
@@ -42,8 +31,8 @@ export function Skills() {
                 <h2 className="text-3xl font-bold mb-8">Skills</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                    {skills.map((skill, index) => (
-                        <SkillCard key={index} {...skill} />
+                    {SKILLS.map((skill) => (
+                        <SkillCard key={skill.name} {...skill} />
                     ))}
                 </div>
             </div>
