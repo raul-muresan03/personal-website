@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://personal-website.vercel.app/sitemap.xml
+Sitemap: https://raul-muresan-personal-website.vercel.app/sitemap.xml

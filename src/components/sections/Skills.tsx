@@ -1,15 +1,7 @@
-import type { ComponentType } from "react";
 import { SKILLS } from "../../constants";
+import type { Skill } from "../../constants";
 
-interface SkillCardProps {
-    name: string;
-    experience: string;
-    level: string;
-    Icon: ComponentType<{ className?: string }>;
-}
-
-export function SkillCard({ name, experience, level, Icon }: SkillCardProps) {
-    const experienceText = experience === "1" ? "1 year" : `${experience} years`;
+export function SkillCard({ name, description, Icon }: Skill) {
 
     return (
         <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:shadow-lg flex flex-col items-center text-center">
@@ -18,7 +10,7 @@ export function SkillCard({ name, experience, level, Icon }: SkillCardProps) {
                 {name}
             </h3>
             <p className="text-gray-700 dark:text-gray-300">
-                {level} ({experienceText})
+                {description}
             </p>
         </div>
     )

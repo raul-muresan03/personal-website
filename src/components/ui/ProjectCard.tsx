@@ -36,7 +36,7 @@ export const ProjectCard = ({ title, desc, image, tags, link, link2 }: Project) 
                         className="mt-4 flex items-center gap-2 text-gray-800 dark:text-gray-200 hover:text-blue-500 hover:underline transition-all"
                     >
                         <TbPlanet className="text-xl" size={30} />
-                        <span className="font-bold">View on Server </span>
+                        <span className="font-bold">View Live Demo</span>
                     </a>
                 )}
             </div>
