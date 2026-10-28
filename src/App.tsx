@@ -8,7 +8,7 @@ import { Footer } from './components/ui/Footer';
 
 export default function App() {
   return (
-    <div className="bg-white dark:bg-gray-900 dark:text-gray-100 min-h-screen transition-colors duration-300">
+    <div className="bg-white min-h-screen transition-colors duration-300">
       <Navbar />
       <HeroSection />
       <Experience />

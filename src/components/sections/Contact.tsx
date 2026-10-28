@@ -12,14 +12,14 @@ export function Contact() {
     };
 
     return (
-        <section id="contact" className="py-32 bg-white dark:bg-gray-900 transition-colors duration-300">
+        <section id="contact" className="py-32 bg-white transition-colors duration-300">
             <div className="container mx-auto px-6 text-center">
                 <div className="max-w-4xl mx-auto">
-                    <h2 className="text-4xl md:text-6xl font-display font-extrabold mb-8 tracking-tight text-gray-900 dark:text-white">
+                    <h2 className="text-4xl md:text-6xl font-display font-extrabold mb-8 tracking-tight text-gray-900">
                         Let's build something <span className="text-blue-500 underline decoration-blue-500/20 underline-offset-8">together</span>.
                     </h2>
 
-                    <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-16 max-w-2xl mx-auto font-medium leading-relaxed">
+                    <p className="text-lg md:text-xl text-gray-600 mb-16 max-w-2xl mx-auto font-medium leading-relaxed">
                         I'm currently looking for new opportunities and collaborations. If you have a question, my inbox is open!
                     </p>
 
@@ -27,7 +27,7 @@ export function Contact() {
                         <button
                             onClick={copyToClipboard}
                             aria-label="Copy email address to clipboard"
-                            className="group relative flex flex-col items-center justify-center p-10 md:p-16 bg-blue-50/50 dark:bg-gray-800/50 rounded-[2.5rem] border-2 border-dashed border-blue-200 dark:border-blue-900/50 hover:border-blue-500 dark:hover:border-blue-400 hover:bg-white dark:hover:bg-gray-800 transition-all duration-500 overflow-hidden"
+                            className="group relative flex flex-col items-center justify-center p-10 md:p-16 bg-blue-50/50 rounded-[2.5rem] border-2 border-dashed border-blue-200 hover:border-blue-500 hover:bg-white transition-all duration-500 overflow-hidden"
                         >
                             <div className="mb-6 p-5 bg-blue-500 rounded-2xl text-white shadow-xl shadow-blue-500/20 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                                 {copied ? <FaCheck size={32} /> : <FaEnvelope size={32} />}
@@ -37,7 +37,7 @@ export function Contact() {
                                 {copied ? "Copied Successfully" : "Get in touch"}
                             </span>
 
-                            <span className="text-2xl md:text-3xl font-display font-semibold text-gray-900 dark:text-white tracking-tight">
+                            <span className="text-2xl md:text-3xl font-display font-semibold text-gray-900 tracking-tight">
                                 {EMAIL}
                             </span>
 
