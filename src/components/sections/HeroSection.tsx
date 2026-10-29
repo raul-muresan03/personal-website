@@ -1,7 +1,32 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { HERO_TITLES } from "../../constants";
+import { useEffect, useState } from "react";
+import { FaCheck, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import { EMAIL, HERO_TITLES } from "../../constants";
 
 export function HeroSection() {
+    const [copyStatus, setCopyStatus] = useState<"idle" | "copied" | "error">("idle");
+
+    useEffect(() => {
+        if (copyStatus === "idle") return;
+
+        const timeout = window.setTimeout(() => setCopyStatus("idle"), 2000);
+        return () => window.clearTimeout(timeout);
+    }, [copyStatus]);
+
+    const copyToClipboard = async () => {
+        try {
+            await navigator.clipboard.writeText(EMAIL);
+            setCopyStatus("copied");
+        } catch {
+            setCopyStatus("error");
+        }
+    };
+
+    const copyMessage = copyStatus === "copied"
+        ? "Copied Successfully"
+        : copyStatus === "error"
+            ? "Could not copy email address"
+            : "";
+
     return (
         <section id="home" className="px-6 pt-8 pb-12 bg-gradient-to-b from-white via-white to-blue-50">
             <div className="max-w-4xl mx-auto grid gap-8 md:grid-cols-[15rem_minmax(0,1fr)] items-start">
@@ -18,6 +43,16 @@ export function HeroSection() {
                         <a href="https://www.linkedin.com/in/raul-c%C4%83lin-mure%C8%99an-60598b197/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" className="text-gray-500 hover:text-blue-600 transition-colors">
                             <FaLinkedin size={20} />
                         </a>
+                        <button
+                            type="button"
+                            onClick={copyToClipboard}
+                            aria-label="Copy email address to clipboard"
+                            title={copyMessage || EMAIL}
+                            className="text-gray-500 hover:text-blue-600 transition-colors"
+                        >
+                            {copyStatus === "copied" ? <FaCheck size={20} /> : <FaEnvelope size={20} />}
+                            <span role="status" className="sr-only">{copyMessage}</span>
+                        </button>
                     </div>
                 </div>
 

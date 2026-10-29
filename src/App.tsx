@@ -1,5 +1,4 @@
 import { Experience } from './components/sections/Experience';
-import { Contact } from './components/sections/Contact';
 import { HeroSection } from './components/sections/HeroSection';
 import { Projects } from './components/sections/Projects';
 import { Skills } from './components/sections/Skills';
@@ -12,7 +11,6 @@ export default function App() {
       <Experience />
       <Projects />
       <Skills />
-      <Contact />
       <Footer />
     </div>
   );
