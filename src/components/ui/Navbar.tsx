@@ -1,4 +1,3 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { NAV_LINKS } from "../../constants";
 
 export function Navbar() {
@@ -26,15 +25,6 @@ export function Navbar() {
                             {link.label}
                         </button>
                     ))}
-                </div>
-
-                <div className="flex items-center space-x-5">
-                    <a href="https://github.com/raul-muresan03" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="text-gray-500 hover:text-gray-900 transition-colors">
-                        <FaGithub size={20} />
-                    </a>
-                    <a href="https://www.linkedin.com/in/raul-c%C4%83lin-mure%C8%99an-60598b197/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" className="text-gray-500 hover:text-blue-600 transition-colors">
-                        <FaLinkedin size={20} />
-                    </a>
                 </div>
             </div>
         </nav>
