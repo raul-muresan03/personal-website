@@ -1,9 +1,6 @@
-import { TYPEWRITER_STRINGS } from "../../constants";
-import { useTypewriter } from "../../hooks/useTypewriter";
+import { HERO_TITLES } from "../../constants";
 
 export function HeroSection() {
-    const typedText = useTypewriter(TYPEWRITER_STRINGS);
-
     return (
         <section id="home" className="h-screen flex flex-col items-center justify-center text-center p-6 md:flex-row md:space-x-8 bg-gradient-to-b from-white via-white to-blue-50">
             <div className="md:w-1/2">
@@ -11,9 +8,10 @@ export function HeroSection() {
                     Hey, I'm <br />
                     <span className="text-blue-500">&lt;/Raul Mureșan&gt;</span>
                 </h1>
-                <div className="font-bold text-2xl md:text-4xl">
-                    <span>{typedText}</span>
-                    <span className="inline-block w-[3px] h-[0.9em] bg-blue-500 align-middle ml-1 animate-blink" aria-hidden="true"></span>
+                <div className="font-bold text-2xl md:text-4xl space-y-2">
+                    {HERO_TITLES.map((title) => (
+                        <p key={title}>{title}</p>
+                    ))}
                 </div>
             </div>
 

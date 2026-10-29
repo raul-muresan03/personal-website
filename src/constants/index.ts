@@ -3,7 +3,7 @@ import { FaBrain, FaCode, FaDatabase, FaLanguage, FaReact } from "react-icons/fa
 
 export const EMAIL = "raulmuresancalin@gmail.com";
 
-export const TYPEWRITER_STRINGS = [
+export const HERO_TITLES = [
     "Software Engineer.",
     "Full Stack Developer.",
     "Computer Vision & RAG Enthusiast.",
