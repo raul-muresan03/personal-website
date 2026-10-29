@@ -1,33 +1,19 @@
 import { SKILLS } from "../../constants";
-import type { Skill } from "../../constants";
-
-export function SkillCard({ name, description, Icon }: Skill) {
-
-    return (
-        <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-            <Icon className="text-blue-500 text-5xl mb-4" />
-            <h3 className="text-xl font-bold">
-                {name}
-            </h3>
-            <p className="text-gray-700">
-                {description}
-            </p>
-        </div>
-    )
-}
 
 export function Skills() {
     return (
-        <section id="skills" className="py-20 bg-white scroll-mt-20">
-            <div className="max-w-6xl mx-auto px-4 text-center">
-                <h2 className="text-3xl font-bold mb-8">Skills</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
+        <section id="skills" className="px-6 py-12 bg-white">
+            <div className="max-w-4xl mx-auto">
+                <h2 className="text-2xl font-display font-bold mb-6">Skills</h2>
+                <dl className="space-y-3 text-gray-700">
                     {SKILLS.map((skill) => (
-                        <SkillCard key={skill.name} {...skill} />
+                        <div key={skill.name} className="leading-relaxed">
+                            <dt className="inline font-semibold text-gray-900">{skill.name}:</dt>{" "}
+                            <dd className="inline">{skill.description}</dd>
+                        </div>
                     ))}
-                </div>
+                </dl>
             </div>
         </section>
-    )
+    );
 }

@@ -1,6 +1,3 @@
-import type { ComponentType } from "react";
-import { FaBrain, FaCode, FaDatabase, FaLanguage, FaReact } from "react-icons/fa";
-
 export const EMAIL = "raulmuresancalin@gmail.com";
 
 export const HERO_TITLES = [
@@ -69,34 +66,28 @@ export const PROJECTS: Project[] = [
 export interface Skill {
     name: string;
     description: string;
-    Icon: ComponentType<{ className?: string }>;
 }
 
 export const SKILLS: Skill[] = [
     {
         name: "Programming Languages",
         description: "Python, JavaScript/TypeScript, SQL, C/C++",
-        Icon: FaCode,
     },
     {
         name: "Frameworks & Libraries",
         description: "FastAPI, SQLAlchemy, React, Next.js, OpenCV",
-        Icon: FaReact,
     },
     {
         name: "Databases & Tools",
         description: "PostgreSQL, Docker, Git, Linux, pytest, GitHub Actions",
-        Icon: FaDatabase,
     },
     {
         name: "Applied AI",
         description: "RAG, Embeddings, Semantic Chunking, Vector Search, Ollama",
-        Icon: FaBrain,
     },
     {
         name: "Languages",
         description: "Romanian (Native), English (Fluent), French (Intermediate)",
-        Icon: FaLanguage,
     },
 ];
 
