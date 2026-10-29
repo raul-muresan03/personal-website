@@ -9,7 +9,7 @@ export function HeroSection() {
                     <img
                         src="profile_picture.png"
                         alt="Profile picture of Raul Mureșan"
-                        className="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover border-2 border-blue-500 shadow-[0px_4px_10px_0px_rgba(0,0,255,0.5)]"
+                        className="w-40 h-48 md:w-60 md:h-72 rounded-md object-cover object-top bg-gray-100"
                     />
                     <div className="flex items-center space-x-5">
                         <a href="https://github.com/raul-muresan03" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="text-gray-500 hover:text-gray-900 transition-colors">
