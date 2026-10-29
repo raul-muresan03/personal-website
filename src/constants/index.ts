@@ -1,11 +1,5 @@
 export const EMAIL = "raulmuresancalin@gmail.com";
 
-export const HERO_TITLES = [
-    "Software Engineer.",
-    "Full Stack Developer.",
-    "Computer Vision & RAG Enthusiast.",
-] as const;
-
 export interface Project {
     title: string;
     desc: string;

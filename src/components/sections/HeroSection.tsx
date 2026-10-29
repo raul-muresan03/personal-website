@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { FaCheck, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
-import { EMAIL, HERO_TITLES } from "../../constants";
+import { FaCheck, FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt } from "react-icons/fa";
+import { EMAIL } from "../../constants";
 
 export function HeroSection() {
     const [copyStatus, setCopyStatus] = useState<"idle" | "copied" | "error">("idle");
@@ -57,14 +57,24 @@ export function HeroSection() {
                 </div>
 
                 <div className="min-w-0 text-left">
-                    <h1 className="text-3xl md:text-5xl font-display font-extrabold mb-4">
-                        Hey, I'm <br />
-                        <span className="text-blue-500">&lt;/Raul Mureșan&gt;</span>
+                    <h1 className="text-3xl md:text-4xl font-display font-extrabold mb-2">
+                        Hello, I'm <span className="text-blue-500">Raul Mureșan</span>
                     </h1>
-                    <div className="font-bold text-2xl md:text-4xl space-y-2">
-                        {HERO_TITLES.map((title) => (
-                            <p key={title}>{title}</p>
-                        ))}
+                    <p className="text-lg italic text-gray-600">Full Stack Developer</p>
+                    <p className="mt-3 flex items-center gap-2 text-sm text-gray-500">
+                        <FaMapMarkerAlt aria-hidden="true" className="shrink-0" />
+                        Cluj-Napoca, Romania
+                    </p>
+
+                    <div className="mt-6 space-y-4 leading-relaxed text-gray-700">
+                        <p>
+                            I build full-stack applications with Python, FastAPI, PostgreSQL, React and Next.js.
+                            My projects range from an OCR-powered exam platform to a RAG application for querying financial reports.
+                        </p>
+                        <p>
+                            My previous experience includes automating workflows at Bosch and teaching programming.
+                            I'm currently looking for a Full Stack Developer role where I can build useful applications and solve practical problems.
+                        </p>
                     </div>
                 </div>
             </div>
