@@ -2,13 +2,10 @@ export function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="py-8 border-t border-gray-100 bg-white">
-            <div className="container mx-auto px-4 text-center">
-                <p className="text-gray-600 font-medium">
-                    © {currentYear} Crafted by <span className="text-blue-500 font-bold">Raul Mureșan</span>
-                </p>
-                <p className="text-gray-400 text-sm mt-2">
-                    Built with React, Vite & Tailwind CSS
+        <footer className="px-6 py-4 bg-white">
+            <div className="max-w-4xl mx-auto text-center text-xs text-gray-500">
+                <p>
+                    © {currentYear} Crafted by Raul Mureșan
                 </p>
             </div>
         </footer>
