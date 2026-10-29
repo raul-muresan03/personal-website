@@ -4,42 +4,52 @@ import type { Project } from "../../constants";
 
 export const ProjectCard = ({ title, desc, image, tags, link, link2 }: Project) => {
     return (
-        <div className="shadow-lg rounded-lg bg-white border border-gray-100 p-5">
-            <img src={image} alt={title} loading="lazy" decoding="async" className="w-full h-48 object-cover rounded-md mb-4" />
-            <h3 className="text-xl font-bold mb-2">{title}</h3>
-            <p className="text-gray-700">{desc}</p>
-            <div className="mt-2 flex flex-wrap gap-2">
-                {tags.map((tag) => (
-                    <span key={tag} className="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">
-                        {tag}
-                    </span>
-                ))}
+        <article className="border-b border-gray-200 py-5">
+            <div className="grid items-start gap-4 sm:grid-cols-[minmax(0,1fr)_14rem] sm:gap-6">
+                <div className="min-w-0">
+                    <h3 className="text-lg font-bold">{title}</h3>
+                    <p className="mt-1 leading-relaxed text-gray-700">{desc}</p>
+                    <ul className="mt-2 flex flex-wrap gap-2" aria-label={`${title} technologies`}>
+                        {tags.map((tag) => (
+                            <li key={tag} className="rounded-full bg-gray-200 px-3 py-1 text-xs text-gray-800">
+                                {tag}
+                            </li>
+                        ))}
+                    </ul>
+
+                    <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2">
+                        <a
+                            href={link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-gray-800 hover:text-blue-500 hover:underline"
+                        >
+                            <FaGithub className="text-lg" size={20} />
+                            <span className="font-bold">GitHub</span>
+                        </a>
+
+                        {link2 && (
+                            <a
+                                href={link2}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 text-gray-800 hover:text-blue-500 hover:underline"
+                            >
+                                <TbPlanet className="text-lg" size={20} />
+                                <span className="font-bold">Demo</span>
+                            </a>
+                        )}
+                    </div>
+                </div>
+
+                <img
+                    src={image}
+                    alt={`${title} screenshot`}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-40 w-full rounded-md bg-gray-50 object-contain p-1"
+                />
             </div>
-
-            <div className="mt-4 flex items-center gap-4">
-
-                <a
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 flex items-center gap-2 text-gray-800 hover:text-blue-500 hover:underline"
-                >
-                    <FaGithub className="text-xl" size={30} />
-                    <span className="font-bold">View on GitHub</span>
-                </a>
-
-                {link2 && (
-                    <a
-                        href={link2}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-4 flex items-center gap-2 text-gray-800 hover:text-blue-500 hover:underline"
-                    >
-                        <TbPlanet className="text-xl" size={30} />
-                        <span className="font-bold">View Demo</span>
-                    </a>
-                )}
-            </div>
-        </div>
+        </article>
     );
 }

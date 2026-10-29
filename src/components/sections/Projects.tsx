@@ -3,21 +3,12 @@ import { ProjectCard } from "../ui/ProjectCard";
 
 export function Projects() {
     return (
-        <section id="projects" className="flex items-center justify-center mb-16 scroll-mt-20">
-            <div className="text-center">
-                <h2 className="text-3xl font-bold mb-8">My projects</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section id="projects" className="px-6 py-12">
+            <div className="max-w-4xl mx-auto">
+                <h2 className="text-2xl font-display font-bold mb-4">My projects</h2>
+                <div>
                     {PROJECTS.map((project) => (
-                        <div className="max-w-sm mx-auto" key={project.title}>
-                            <ProjectCard
-                                title={project.title}
-                                desc={project.desc}
-                                image={project.image}
-                                tags={project.tags}
-                                link={project.link}
-                                link2={project.link2}
-                            />
-                        </div>
+                        <ProjectCard key={project.title} {...project} />
                     ))}
                 </div>
             </div>

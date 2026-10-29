@@ -8,8 +8,8 @@ export default function App() {
   return (
     <div className="bg-white min-h-screen">
       <HeroSection />
-      <Experience />
       <Projects />
+      <Experience />
       <Skills />
       <Footer />
     </div>
