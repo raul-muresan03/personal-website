@@ -53,7 +53,7 @@ export const PROJECTS: Project[] = [
     {
         title: 'IoT Security System',
         desc: 'Created a motion-detection system integrating temperature/humidity sensors and real-time alerts via IFTTT webhooks for immediate email notifications.',
-        image: 'arduino.jpg',
+        image: 'arduino.webp',
         tags: ['C++', 'Arduino UNO R4', 'IFTTT', 'IoT'],
         link: 'https://github.com/raul-muresan03/Security-System-With-Motion-Sensor-And-Email-Notification'
     },
