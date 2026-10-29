@@ -22,7 +22,7 @@ export const PROJECTS: Project[] = [
     {
         title: "MathSim (Bachelor’s Thesis)",
         desc: 'Full-stack platform for digitizing and grading 959 math questions from a 166-page dataset. An OpenCV/Tesseract OCR pipeline achieved a 7.2× speedup (63s to 8.7s) using multiprocessing. FastAPI/PostgreSQL supports JWT authentication, student/admin roles, persistent exam sessions, and automatic grading; Next.js provides timed quizzes and progress tracking.',
-        image: "licenta_MathSim.png",
+        image: "licenta_MathSim.webp",
         tags: ['Python', 'OpenCV', 'Tesseract OCR', 'FastAPI', 'PostgreSQL', 'Next.js'],
         link: 'https://github.com/raul-muresan03/MathSim',
         link2: 'https://mathsim-lac.vercel.app/',
@@ -30,7 +30,7 @@ export const PROJECTS: Project[] = [
     {
         title: 'SEC 10-K RAG',
         desc: 'RAG application for SEC 10-K filings, with semantic chunking, cosine-similarity retrieval in Python, generated answers, ranked passages, and original sources. Deployed serverlessly with immutable indexes, local Docker/Ollama support, automated tests, and CI/CD smoke checks. Evaluated on 16 held-out questions: Hit@5 of 10/12 on answerable queries, correct abstention on 4/4 unanswerable queries, and 0 false abstentions.',
-        image: 'sec-10k-rag.png',
+        image: 'sec-10k-rag.webp',
         tags: ['Python', 'FastAPI', 'React', 'Docker', 'Vercel', 'Ollama', 'Cloudflare Workers AI'],
         link: 'https://github.com/raul-muresan03/sec-10k-rag',
         link2: 'https://sec-10k-rag-rauls-projects-2096a6fa.vercel.app/',
@@ -38,7 +38,7 @@ export const PROJECTS: Project[] = [
     {
         title: 'NoteFlow',
         desc: 'A content management application optimizing load times and SEO via Next.js Server-Side Rendering (SSR). Built a type-safe, modular architecture to ensure scalability.',
-        image: "noteflow.png",
+        image: "noteflow.webp",
         tags: ['React', 'Next.js', 'Typescript', 'Convex', 'Tailwind CSS'],
         link: 'https://github.com/raul-muresan03/NoteFlow',
         link2: "https://note-flow-beryl.vercel.app/"
@@ -46,7 +46,7 @@ export const PROJECTS: Project[] = [
     {
         title: 'Questify',
         desc: 'Q&A platform designed with a normalized PostgreSQL database schema to efficiently handle complex user interactions and voting logic. Implemented secure RESTful endpoints.',
-        image: "questify1.png",
+        image: "questify1.webp",
         tags: ['React', 'PostgreSQL', 'REST API', 'Typescript', 'Tailwind CSS'],
         link: 'https://github.com/omuletzu/Questify',
     },
@@ -60,7 +60,7 @@ export const PROJECTS: Project[] = [
     {
         title: 'Pacman Clone',
         desc: 'Engineered a low-level game clone in x86 Assembly, focusing on manual memory management and optimized graphics rendering logic.',
-        image: 'pacman.png',
+        image: 'pacman.webp',
         tags: ['Assembly x86', 'Low-level'],
         link: 'https://github.com/raul-muresan03/Pacman_Assembly_x86'
     }

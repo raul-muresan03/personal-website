@@ -32,7 +32,7 @@ export function HeroSection() {
             <div className="max-w-4xl mx-auto grid gap-8 md:grid-cols-[15rem_minmax(0,1fr)] items-start">
                 <div className="flex flex-col items-center gap-4">
                     <img
-                        src="profile_picture.png"
+                        src="profile_picture.webp"
                         alt="Profile picture of Raul Mureșan"
                         className="w-40 h-48 md:w-60 md:h-72 rounded-md object-cover object-top bg-gray-100"
                     />
