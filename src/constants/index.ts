@@ -9,13 +9,6 @@ export const HERO_TITLES = [
     "Computer Vision & RAG Enthusiast.",
 ] as const;
 
-export const NAV_LINKS = [
-    { id: "experience", label: "Experience" },
-    { id: "projects", label: "Projects" },
-    { id: "skills", label: "Skills" },
-    { id: "contact", label: "Contact" },
-] as const;
-
 export interface Project {
     title: string;
     desc: string;

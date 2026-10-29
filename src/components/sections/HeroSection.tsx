@@ -3,7 +3,7 @@ import { HERO_TITLES } from "../../constants";
 
 export function HeroSection() {
     return (
-        <section id="home" className="px-6 pt-24 pb-12 bg-gradient-to-b from-white via-white to-blue-50">
+        <section id="home" className="px-6 pt-8 pb-12 bg-gradient-to-b from-white via-white to-blue-50">
             <div className="max-w-4xl mx-auto grid gap-8 md:grid-cols-[15rem_minmax(0,1fr)] items-start">
                 <div className="flex flex-col items-center gap-4">
                     <img
