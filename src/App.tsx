@@ -6,7 +6,7 @@ import { Footer } from './components/ui/Footer';
 
 export default function App() {
   return (
-    <div className="bg-white min-h-screen transition-colors duration-300">
+    <div className="bg-white min-h-screen">
       <HeroSection />
       <Experience />
       <Projects />

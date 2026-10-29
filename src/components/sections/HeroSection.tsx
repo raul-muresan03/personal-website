@@ -37,10 +37,10 @@ export function HeroSection() {
                         className="w-40 h-48 md:w-60 md:h-72 rounded-md object-cover object-top bg-gray-100"
                     />
                     <div className="flex items-center space-x-5">
-                        <a href="https://github.com/raul-muresan03" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="text-gray-500 hover:text-gray-900 transition-colors">
+                        <a href="https://github.com/raul-muresan03" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="text-gray-500 hover:text-gray-900">
                             <FaGithub size={20} />
                         </a>
-                        <a href="https://www.linkedin.com/in/raul-c%C4%83lin-mure%C8%99an-60598b197/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" className="text-gray-500 hover:text-blue-600 transition-colors">
+                        <a href="https://www.linkedin.com/in/raul-c%C4%83lin-mure%C8%99an-60598b197/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" className="text-gray-500 hover:text-blue-600">
                             <FaLinkedin size={20} />
                         </a>
                         <button
@@ -48,7 +48,7 @@ export function HeroSection() {
                             onClick={copyToClipboard}
                             aria-label="Copy email address to clipboard"
                             title={copyMessage || EMAIL}
-                            className="text-gray-500 hover:text-blue-600 transition-colors"
+                            className="text-gray-500 hover:text-blue-600"
                         >
                             {copyStatus === "copied" ? <FaCheck size={20} /> : <FaEnvelope size={20} />}
                             <span role="status" className="sr-only">{copyMessage}</span>

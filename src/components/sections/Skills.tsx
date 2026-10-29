@@ -4,7 +4,7 @@ import type { Skill } from "../../constants";
 export function SkillCard({ name, description, Icon }: Skill) {
 
     return (
-        <div className="bg-white p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:shadow-lg flex flex-col items-center text-center">
+        <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
             <Icon className="text-blue-500 text-5xl mb-4" />
             <h3 className="text-xl font-bold">
                 {name}
