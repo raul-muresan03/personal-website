@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaCheck, FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt } from "react-icons/fa";
+import { FaCheck, FaEnvelope, FaFilePdf, FaGithub, FaLinkedin, FaMapMarkerAlt } from "react-icons/fa";
 import { EMAIL } from "../../constants";
 
 export function HeroSection() {
@@ -36,7 +36,7 @@ export function HeroSection() {
                         alt="Profile picture of Raul Mureșan"
                         className="w-40 h-48 md:w-60 md:h-72 rounded-md object-cover object-top bg-gray-100"
                     />
-                    <div className="flex items-center space-x-5">
+                    <div className="flex items-center gap-5">
                         <a href="https://github.com/raul-muresan03" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="text-gray-500 hover:text-gray-900">
                             <FaGithub size={20} />
                         </a>
@@ -53,6 +53,16 @@ export function HeroSection() {
                             {copyStatus === "copied" ? <FaCheck size={20} /> : <FaEnvelope size={20} />}
                             <span role="status" className="sr-only">{copyMessage}</span>
                         </button>
+                        <a
+                            href="./CV_Raul_Muresan.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Open CV (PDF) in a new tab"
+                            className="inline-flex items-center gap-1 text-gray-500 transition-colors hover:text-blue-600"
+                        >
+                            <FaFilePdf size={20} aria-hidden="true" />
+                            <span className="text-sm font-medium">CV</span>
+                        </a>
                     </div>
                 </div>
 

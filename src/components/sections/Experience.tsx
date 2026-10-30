@@ -1,4 +1,3 @@
-import { FaFilePdf } from "react-icons/fa";
 import { TIMELINE } from "../../constants";
 
 const EXPERIENCE_SECTIONS = [
@@ -37,15 +36,6 @@ export function Experience() {
                         </section>
                     ))}
                 </div>
-
-                <a
-                    href="./CV_Raul_Muresan.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-10 inline-flex items-center gap-2 font-semibold text-blue-600 hover:underline"
-                >
-                    <FaFilePdf /> View Full CV
-                </a>
             </div>
         </section>
     );

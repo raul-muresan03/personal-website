@@ -48,8 +48,7 @@ test('full project details, contact controls and CV remain in the HTML', () => {
     assert.ok(text.includes('7.2× speedup'));
     assert.ok(text.includes('Hit@5 of 10/12'));
     assert.ok(text.includes('0 false abstentions'));
-    assert.ok(text.includes('View Full CV'));
-    assert.match(body, /href="\.\/CV_Raul_Muresan\.pdf"/);
+    assert.match(body, /<a[^>]+href="\.\/CV_Raul_Muresan\.pdf"[^>]+aria-label="Open CV \(PDF\) in a new tab"[^>]*>[\s\S]*?<span[^>]*>CV<\/span>[\s\S]*?<\/a>/);
     assert.match(body, /aria-label="Copy email address to clipboard"/);
     assert.match(body, /title="raulmuresancalin@gmail\.com"/);
 });
