@@ -1,5 +1,11 @@
-export function Footer() {
-    const currentYear = new Date().getFullYear();
+import { useEffect, useState } from 'react';
+
+export function Footer({ initialYear }: { initialYear: number }) {
+    const [currentYear, setCurrentYear] = useState(initialYear);
+
+    useEffect(() => {
+        setCurrentYear(new Date().getFullYear());
+    }, []);
 
     return (
         <footer className="px-6 py-4 bg-white">

@@ -3,9 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
-const root = ReactDOM.createRoot(document.getElementById('root')!);
-root.render(
+const container = document.getElementById('root')!;
+const initialYear = Number(container.dataset.year) || new Date().getFullYear();
+const app = (
   <React.StrictMode>
-    <App />
+    <App initialYear={initialYear} />
   </React.StrictMode>
 );
+
+if (container.hasChildNodes()) {
+  ReactDOM.hydrateRoot(container, app);
+} else {
+  ReactDOM.createRoot(container).render(app);
+}
