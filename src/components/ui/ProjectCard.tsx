@@ -79,6 +79,8 @@ export const ProjectCard = ({ title, desc, image, tags, githubUrl, demoUrl }: Pr
                     <img
                         src={image}
                         alt={`${title} enlarged screenshot`}
+                        loading="lazy"
+                        decoding="async"
                         className="max-h-[85vh] max-w-full object-contain"
                     />
                 </div>
