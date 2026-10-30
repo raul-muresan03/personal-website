@@ -54,7 +54,7 @@ export function HeroSection() {
                             <span role="status" className="sr-only">{copyMessage}</span>
                         </button>
                         <a
-                            href="./CV_Raul_Muresan.pdf"
+                            href="./cv_raul_muresan.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Open CV (PDF) in a new tab"

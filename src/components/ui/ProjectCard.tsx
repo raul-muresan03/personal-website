@@ -1,8 +1,20 @@
+import { useEffect, useRef, useState } from "react";
 import { FaGithub } from "react-icons/fa";
-import { TbPlanet } from "react-icons/tb";
+import { TbPlanet, TbZoomIn } from "react-icons/tb";
 import type { Project } from "../../constants";
 
 export const ProjectCard = ({ title, desc, image, tags, link, link2 }: Project) => {
+    const [isImageOpen, setIsImageOpen] = useState(false);
+    const dialogRef = useRef<HTMLDialogElement>(null);
+
+    useEffect(() => {
+        const dialog = dialogRef.current;
+        if (!dialog) return;
+
+        if (isImageOpen && !dialog.open) dialog.showModal();
+        if (!isImageOpen && dialog.open) dialog.close();
+    }, [isImageOpen]);
+
     return (
         <article className="border-b border-gray-200 py-5">
             <div className="grid items-start gap-4 sm:grid-cols-[minmax(0,1fr)_14rem] sm:gap-6">
@@ -42,14 +54,45 @@ export const ProjectCard = ({ title, desc, image, tags, link, link2 }: Project) 
                     </div>
                 </div>
 
-                <img
-                    src={image}
-                    alt={`${title} screenshot`}
-                    loading="lazy"
-                    decoding="async"
-                    className="h-40 w-full rounded-md bg-gray-50 object-contain p-1"
-                />
+                <button
+                    type="button"
+                    aria-label={`View larger screenshot of ${title}`}
+                    onClick={() => setIsImageOpen(true)}
+                    className="group relative h-40 w-full cursor-zoom-in overflow-hidden rounded-md bg-gray-50 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                >
+                    <img
+                        src={image}
+                        alt={`${title} screenshot`}
+                        loading="lazy"
+                        decoding="async"
+                        className="h-full w-full object-contain p-1"
+                    />
+                    <span
+                        aria-hidden="true"
+                        className="absolute bottom-2 right-2 rounded-full bg-white/90 p-1.5 text-gray-700 shadow-sm transition-colors group-hover:text-blue-600 group-focus-visible:text-blue-600"
+                    >
+                        <TbZoomIn size={18} />
+                    </span>
+                </button>
             </div>
+
+            <dialog
+                ref={dialogRef}
+                aria-label={`${title} screenshot`}
+                onClose={() => setIsImageOpen(false)}
+                onClick={(event) => {
+                    if (event.target === event.currentTarget) event.currentTarget.close();
+                }}
+                className="max-h-[90vh] w-[95vw] max-w-6xl border-0 bg-transparent p-0 text-white backdrop:bg-black/80"
+            >
+                <div className="flex max-h-[90vh] min-h-48 items-center justify-center">
+                    <img
+                        src={image}
+                        alt={`${title} enlarged screenshot`}
+                        className="max-h-[85vh] max-w-full object-contain"
+                    />
+                </div>
+            </dialog>
         </article>
     );
 }

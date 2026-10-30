@@ -13,7 +13,7 @@ export const PROJECTS: Project[] = [
     {
         title: "MathSim (Bachelor’s Thesis)",
         desc: 'Full-stack platform for digitizing and grading 959 math questions from a 166-page dataset. An OpenCV/Tesseract OCR pipeline achieved a 7.2× speedup (63s to 8.7s) using multiprocessing. FastAPI/PostgreSQL supports JWT authentication, student/admin roles, persistent exam sessions, and automatic grading; Next.js provides timed quizzes and progress tracking.',
-        image: "licenta_MathSim.webp",
+        image: "licenta_mathsim.webp",
         tags: ['Python', 'OpenCV', 'Tesseract OCR', 'FastAPI', 'PostgreSQL', 'Next.js'],
         link: 'https://github.com/raul-muresan03/MathSim',
         link2: 'https://mathsim-lac.vercel.app/',
@@ -21,7 +21,7 @@ export const PROJECTS: Project[] = [
     {
         title: 'SEC 10-K RAG',
         desc: 'RAG application for SEC 10-K filings, with semantic chunking, cosine-similarity retrieval in Python, generated answers, ranked passages, and original sources. Deployed serverlessly with immutable indexes, local Docker/Ollama support, automated tests, and CI/CD smoke checks. Evaluated on 16 held-out questions: Hit@5 of 10/12 on answerable queries, correct abstention on 4/4 unanswerable queries, and 0 false abstentions.',
-        image: 'sec-10k-rag.webp',
+        image: 'sec_10k_rag.webp',
         tags: ['Python', 'FastAPI', 'React', 'Docker', 'Vercel', 'Ollama', 'Cloudflare Workers AI'],
         link: 'https://github.com/raul-muresan03/sec-10k-rag',
         link2: 'https://sec-10k-rag-rauls-projects-2096a6fa.vercel.app/',
@@ -37,7 +37,7 @@ export const PROJECTS: Project[] = [
     {
         title: 'Questify',
         desc: 'Built the React and TypeScript frontend for a team Q&A platform, with pages for browsing, asking, and voting on questions. The project uses a Spring Boot API and PostgreSQL database.',
-        image: "questify1.webp",
+        image: "questify.webp",
         tags: ['React', 'Typescript', 'PostgreSQL', 'Tailwind CSS'],
         link: 'https://github.com/omuletzu/Questify',
     },
