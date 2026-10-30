@@ -28,7 +28,7 @@ export const PROJECTS: Project[] = [
     },
     {
         title: 'NoteFlow',
-        desc: 'A content management application optimizing load times and SEO via Next.js Server-Side Rendering (SSR). Built a type-safe, modular architecture to ensure scalability.',
+        desc: 'A note-taking app for creating pages, organizing them in a nested structure, and archiving notes.',
         image: "noteflow.webp",
         tags: ['React', 'Next.js', 'Typescript', 'Convex', 'Tailwind CSS'],
         link: 'https://github.com/raul-muresan03/NoteFlow',
@@ -36,23 +36,23 @@ export const PROJECTS: Project[] = [
     },
     {
         title: 'Questify',
-        desc: 'Q&A platform designed with a normalized PostgreSQL database schema to efficiently handle complex user interactions and voting logic. Implemented secure RESTful endpoints.',
+        desc: 'Built the React and TypeScript frontend for a team Q&A platform, with pages for browsing, asking, and voting on questions. The project uses a Spring Boot API and PostgreSQL database.',
         image: "questify1.webp",
-        tags: ['React', 'PostgreSQL', 'REST API', 'Typescript', 'Tailwind CSS'],
+        tags: ['React', 'Typescript', 'PostgreSQL', 'Tailwind CSS'],
         link: 'https://github.com/omuletzu/Questify',
     },
     {
         title: 'IoT Security System',
         desc: 'Created a motion-detection system integrating temperature/humidity sensors and real-time alerts via IFTTT webhooks for immediate email notifications.',
         image: 'arduino.webp',
-        tags: ['C++', 'Arduino UNO R4', 'IFTTT', 'IoT'],
+        tags: ['C++', 'Arduino UNO R4', 'IFTTT'],
         link: 'https://github.com/raul-muresan03/Security-System-With-Motion-Sensor-And-Email-Notification'
     },
     {
         title: 'Pacman Clone',
         desc: 'Engineered a low-level game clone in x86 Assembly, focusing on manual memory management and optimized graphics rendering logic.',
         image: 'pacman.webp',
-        tags: ['Assembly x86', 'Low-level'],
+        tags: ['Assembly x86'],
         link: 'https://github.com/raul-muresan03/Pacman_Assembly_x86'
     }
 ];

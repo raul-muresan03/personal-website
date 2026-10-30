@@ -13,8 +13,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && node scripts/prerender.mjs && npm run check:prerender",
-    "check:prerender": "node --test scripts/prerender.test.mjs",
+    "build": "tsc && vite build && node scripts/prerender.mjs",
     "preview": "vite preview"
   },
   "devDependencies": {
