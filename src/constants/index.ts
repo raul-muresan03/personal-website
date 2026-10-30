@@ -5,8 +5,8 @@ export interface Project {
     desc: string;
     image: string;
     tags: string[];
-    link: string;
-    link2?: string;
+    githubUrl: string;
+    demoUrl?: string;
 }
 
 export const PROJECTS: Project[] = [
@@ -15,45 +15,45 @@ export const PROJECTS: Project[] = [
         desc: 'Full-stack platform for digitizing and grading 959 math questions from a 166-page dataset. An OpenCV/Tesseract OCR pipeline achieved a 7.2× speedup (63s to 8.7s) using multiprocessing. FastAPI/PostgreSQL supports JWT authentication, student/admin roles, persistent exam sessions, and automatic grading; Next.js provides timed quizzes and progress tracking.',
         image: "licenta_mathsim.webp",
         tags: ['Python', 'OpenCV', 'Tesseract OCR', 'FastAPI', 'PostgreSQL', 'Next.js'],
-        link: 'https://github.com/raul-muresan03/MathSim',
-        link2: 'https://mathsim-lac.vercel.app/',
+        githubUrl: 'https://github.com/raul-muresan03/MathSim',
+        demoUrl: 'https://mathsim-lac.vercel.app/',
     },
     {
         title: 'SEC 10-K RAG',
         desc: 'RAG application for SEC 10-K filings, with semantic chunking, cosine-similarity retrieval in Python, generated answers, ranked passages, and original sources. Deployed serverlessly with immutable indexes, local Docker/Ollama support, automated tests, and CI/CD smoke checks. Evaluated on 16 held-out questions: Hit@5 of 10/12 on answerable queries, correct abstention on 4/4 unanswerable queries, and 0 false abstentions.',
         image: 'sec_10k_rag.webp',
         tags: ['Python', 'FastAPI', 'React', 'Docker', 'Vercel', 'Ollama', 'Cloudflare Workers AI'],
-        link: 'https://github.com/raul-muresan03/sec-10k-rag',
-        link2: 'https://sec-10k-rag-rauls-projects-2096a6fa.vercel.app/',
+        githubUrl: 'https://github.com/raul-muresan03/sec-10k-rag',
+        demoUrl: 'https://sec-10k-rag-rauls-projects-2096a6fa.vercel.app/',
     },
     {
         title: 'NoteFlow',
         desc: 'A note-taking app for creating pages, organizing them in a nested structure, and archiving notes.',
         image: "noteflow.webp",
         tags: ['React', 'Next.js', 'Typescript', 'Convex', 'Tailwind CSS'],
-        link: 'https://github.com/raul-muresan03/NoteFlow',
-        link2: "https://note-flow-beryl.vercel.app/"
+        githubUrl: 'https://github.com/raul-muresan03/NoteFlow',
+        demoUrl: "https://note-flow-beryl.vercel.app/"
     },
     {
         title: 'Questify',
         desc: 'Built the React and TypeScript frontend for a team Q&A platform, with pages for browsing, asking, and voting on questions. The project uses a Spring Boot API and PostgreSQL database.',
         image: "questify.webp",
         tags: ['React', 'Typescript', 'PostgreSQL', 'Tailwind CSS'],
-        link: 'https://github.com/omuletzu/Questify',
+        githubUrl: 'https://github.com/omuletzu/Questify',
     },
     {
         title: 'IoT Security System',
         desc: 'Created a motion-detection system integrating temperature/humidity sensors and real-time alerts via IFTTT webhooks for immediate email notifications.',
         image: 'arduino.webp',
         tags: ['C++', 'Arduino UNO R4', 'IFTTT'],
-        link: 'https://github.com/raul-muresan03/Security-System-With-Motion-Sensor-And-Email-Notification'
+        githubUrl: 'https://github.com/raul-muresan03/Security-System-With-Motion-Sensor-And-Email-Notification'
     },
     {
         title: 'Pacman Clone',
         desc: 'Engineered a low-level game clone in x86 Assembly, focusing on manual memory management and optimized graphics rendering logic.',
         image: 'pacman.webp',
         tags: ['Assembly x86'],
-        link: 'https://github.com/raul-muresan03/Pacman_Assembly_x86'
+        githubUrl: 'https://github.com/raul-muresan03/Pacman_Assembly_x86'
     }
 ];
 

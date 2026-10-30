@@ -9,4 +9,4 @@ Use Node.js 22.12+ (or another version supported by `package.json`).
 
 The production site is static and deploys from `dist/`; no runtime rendering server is needed. React hydrates the generated HTML to enable interactions such as copying the email address. The temporary server bundle used during the build is removed automatically.
 
-Edit `src/`, `public/`, or the root `index.html`, not the generated files in `dist/`.
+Edit `src/`, `public/`, `source-assets/`, or the root `index.html`, not generated files in `dist/`. Original PNG/JPG files are kept in `source-assets/`; only files served by the site belong in `public/`.

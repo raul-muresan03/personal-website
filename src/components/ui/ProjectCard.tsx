@@ -1,19 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { FaGithub } from "react-icons/fa";
 import { TbPlanet, TbZoomIn } from "react-icons/tb";
 import type { Project } from "../../constants";
 
-export const ProjectCard = ({ title, desc, image, tags, link, link2 }: Project) => {
-    const [isImageOpen, setIsImageOpen] = useState(false);
+export const ProjectCard = ({ title, desc, image, tags, githubUrl, demoUrl }: Project) => {
     const dialogRef = useRef<HTMLDialogElement>(null);
-
-    useEffect(() => {
-        const dialog = dialogRef.current;
-        if (!dialog) return;
-
-        if (isImageOpen && !dialog.open) dialog.showModal();
-        if (!isImageOpen && dialog.open) dialog.close();
-    }, [isImageOpen]);
 
     return (
         <article className="border-b border-gray-200 py-5">
@@ -31,7 +22,7 @@ export const ProjectCard = ({ title, desc, image, tags, link, link2 }: Project) 
 
                     <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2">
                         <a
-                            href={link}
+                            href={githubUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 text-gray-800 hover:text-blue-500 hover:underline"
@@ -40,9 +31,9 @@ export const ProjectCard = ({ title, desc, image, tags, link, link2 }: Project) 
                             <span className="font-bold">GitHub</span>
                         </a>
 
-                        {link2 && (
+                        {demoUrl && (
                             <a
-                                href={link2}
+                                href={demoUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 text-gray-800 hover:text-blue-500 hover:underline"
@@ -57,7 +48,7 @@ export const ProjectCard = ({ title, desc, image, tags, link, link2 }: Project) 
                 <button
                     type="button"
                     aria-label={`View larger screenshot of ${title}`}
-                    onClick={() => setIsImageOpen(true)}
+                    onClick={() => dialogRef.current?.showModal()}
                     className="group relative h-40 w-full cursor-zoom-in overflow-hidden rounded-md bg-gray-50 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                 >
                     <img
@@ -79,9 +70,8 @@ export const ProjectCard = ({ title, desc, image, tags, link, link2 }: Project) 
             <dialog
                 ref={dialogRef}
                 aria-label={`${title} screenshot`}
-                onClose={() => setIsImageOpen(false)}
                 onClick={(event) => {
-                    if (event.target === event.currentTarget) event.currentTarget.close();
+                    if (!(event.target instanceof HTMLImageElement)) event.currentTarget.close();
                 }}
                 className="max-h-[90vh] w-[95vw] max-w-6xl border-0 bg-transparent p-0 text-white backdrop:bg-black/80"
             >
